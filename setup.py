@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name="proyectoDI",
+    name="CasaDelLibro",
     version="1.0",
     author="David",
     author_email="dalonsofernandez@danielcastelao.org",
@@ -17,9 +17,7 @@ setup(
                 ],
     description="Proyecto DI con sphinx reportlab y mysqllite",
     keywords="empaquetado instalador paquetes",
-    #packages=['proyectoDI'],
-    # OTRA FORMA: packages = find_packages(exclude= ['*.test','*.test.*']) podemo excluír lo que queramos
-
+    packages=['proyecto'],
     #data_files=[('datos', ['dat/datos.txt'])],
-    entry_points={'console_scripts': ['opemProyect = CasaDelLibro: CasaDelLibro', ], }
+    entry_points={'console_scripts': ['openProyect = proyecto.CasaDelLibro: main', ], }
 )
