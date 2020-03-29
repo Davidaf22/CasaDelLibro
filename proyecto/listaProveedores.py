@@ -27,7 +27,7 @@ class listaProveedores(Gtk.Window):
         self.Main = main
 
         builder = Gtk.Builder()
-        builder.add_from_file("Diseño.glade")
+        builder.add_from_file("proyecto/Diseño.glade")
 
         self.ventana = builder.get_object("Main")
         ## self.set_default_size(WIDTH, HEIGHT)

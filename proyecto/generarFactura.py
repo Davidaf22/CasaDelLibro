@@ -63,10 +63,12 @@ class generarFactura():
             detalesFactura = cursor.execute("select idProducto,cantidad from facturasInfo where idFactura='"+idFactura+"'")
             for pro in detalesFactura:
                 for prod in listaProductos:
+                    precio2=0
                     if (prod[0]==pro[0]):
-                        precio=int(pro[1])*float(prod[2])
+                        precio = int(pro[1])*float(prod[2])
+                        precio2=precio
                         factura.append([prod[0],prod[1],pro[1],prod[2],precio])
-                total = total + precio
+                total = total + precio2
             factura.append(['','','','PRECIO TOTAL:',str(total)+" €"])
         except (dbapi2.DatabaseError):
             print("ERROR BD")

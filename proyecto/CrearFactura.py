@@ -26,7 +26,7 @@ class CrearFactura(Gtk.Window):
         self.Main = main
 
         builder = Gtk.Builder()
-        builder.add_from_file("Factura.glade")
+        builder.add_from_file("proyecto/Factura.glade")
 
         self.ventana = builder.get_object("Main")
 

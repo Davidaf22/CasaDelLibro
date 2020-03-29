@@ -6,7 +6,7 @@ from sqlite3 import dbapi2
 """
 try:
     ###Creamos la base de datos y generamos cursosr para ejecutar las consultas.
-    baseDatos = dbapi2.connect("BaseDeDatos.dat")
+    baseDatos = dbapi2.connect("../BaseDeDatos.dat")
     cursor = baseDatos.cursor()
 
     ###Creamos las tablas que vamos a usar
@@ -20,15 +20,15 @@ try:
     cursor.execute("insert into proveedores values('idprov2','Xerais','444-678-453','C.Urzaiz Nº89','988789563','xeraiseditorial@gmail.com')")
     cursor.execute("insert into proveedores values('idprov3','Rodeira','563-234-789','C.Genaro de la Fuente Nº76','986097094','rodeiraeditorial@gmail.com')")
 
-    cursor.execute("insert into productos values('idpro1','Os Arriscados','Miguel Anxo Mouriño', 300, 19.90,'idprov1')")
-    cursor.execute("insert into productos values('idpro2','Enderezo descoñecido','Kressmann Taylor', 50, 25.90, 'idprov2')")
-    cursor.execute("insert into productos values('idpro3','A pedra da serpe','Milio Rodríguez Cueto', 60, 27.90, 'idprov3')")
+    cursor.execute("insert into productos values('idpro1','Os Arriscados','Miguel Anxo Mouriño', 300, 19,'idprov1')")
+    cursor.execute("insert into productos values('idpro2','Enderezo descoñecido','Kressmann Taylor', 50, 25, 'idprov2')")
+    cursor.execute("insert into productos values('idpro3','A pedra da serpe','Milio Rodríguez Cueto', 60, 27, 'idprov3')")
 
     cursor.execute("insert into facturasClientes values(1,'Lafer','658741236','C. Galeraias Calvario Nº7','lafer@gmail.com')")
     cursor.execute("insert into facturasClientes values(1,'Papeles','658741236','C. Genaro de la Fuente Nº56','papeles@gmail.com')")
 
     cursor.execute("insert into facturasInfo values(1,'pro1',2)")
-    cursor.execute("insert into facturasInfo values(1,'pro2',1)")
+    cursor.execute("insert into facturasInfo values(2,'pro2',1)")
 
     ###Realizamos commit en la BD
     baseDatos.commit()
