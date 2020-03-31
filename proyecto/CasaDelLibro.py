@@ -95,6 +95,10 @@ class CasaDelLibro():
         self.ventana.hide()
         Inventario(self.ventana)
 
+def main():
+    CasaDelLibro()
+    Gtk.main()
+
 if __name__ == "__main__":
     CasaDelLibro()
     Gtk.main()
