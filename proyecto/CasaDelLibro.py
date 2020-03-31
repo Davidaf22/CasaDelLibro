@@ -31,7 +31,7 @@ class CasaDelLibro():
 
         """
         builder =  Gtk.Builder()
-        builder.add_from_file("proyecto/CasaDelLibro.glade")
+        builder.add_from_file("CasaDelLibro.glade")
 
         self.ventana = builder.get_object("Main")
 

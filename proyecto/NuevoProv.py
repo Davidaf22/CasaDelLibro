@@ -25,7 +25,7 @@ class NuevoProv(Gtk.Window):
 
         ##Creamos la ventana
         builder = Gtk.Builder()
-        builder.add_from_file("proyecto/NuevoProveedor.glade")
+        builder.add_from_file("NuevoProveedor.glade")
 
         self.ventana = builder.get_object("Main")
 

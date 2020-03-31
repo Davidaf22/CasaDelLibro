@@ -31,7 +31,7 @@ class Inventario(Gtk.Window):
         self.añadir = False
 
         builder = Gtk.Builder()
-        builder.add_from_file("proyecto/Diseño.glade")
+        builder.add_from_file("Diseño.glade")
 
         self.ventana = builder.get_object("Main")
 

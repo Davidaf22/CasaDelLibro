@@ -6,7 +6,7 @@ from sqlite3 import dbapi2
 """
 try:
     ###Creamos la base de datos y generamos cursosr para ejecutar las consultas.
-    baseDatos = dbapi2.connect("../BaseDeDatos.dat")
+    baseDatos = dbapi2.connect("BaseDeDatos.dat")
     cursor = baseDatos.cursor()
 
     ###Creamos las tablas que vamos a usar
